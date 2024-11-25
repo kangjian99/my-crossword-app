@@ -185,7 +185,7 @@ function placeWordOnGrid(word, x, y, dx, dy, grid) {
 }
 
 function removeRandomLetters(grid, usedWords, minRemovalRate) {
-    const size = grid.length;
+    //const size = grid.length;
     
     for (const word of usedWords) {
         const wordLength = word.length;
@@ -244,7 +244,7 @@ function findWordPosition(word, grid) {
 }
 
 function removeLettersFromWord(word, x, y, dx, dy, grid, removalRate) {
-    const size = grid.length;
+    //const size = grid.length;
     const letterIndices = [];
     const crossPoints = [];
 
@@ -344,7 +344,7 @@ function isCrossPoint(x, y, grid) {
     // 如果字母同时在垂直和水平方向有邻居，则为交叉点
     return verticalNeighbor && horizontalNeighbor;
 }
-
+/*
 function displayGrid(grid) {
     const gridElement = document.getElementById('crosswordGrid');
     gridElement.innerHTML = '';
@@ -372,7 +372,7 @@ function displayUsedWords(usedWords) {
     wordListElement.innerHTML = '<h2>已使用的单词：</h2>' + usedWords.join(', ');
     document.body.appendChild(wordListElement);
 }
-
+*/
 function cleanupGrid(grid) {
     const size = grid.length;
     let changed;
@@ -392,7 +392,7 @@ function cleanupGrid(grid) {
 }
 
 function isPartOfWord(grid, x, y) {
-    const size = grid.length;
+    //const size = grid.length;
     // 检查水平方向
     if (isValidWordSegment(grid, x, y, 1, 0) || isValidWordSegment(grid, x, y, -1, 0)) {
         return true;
