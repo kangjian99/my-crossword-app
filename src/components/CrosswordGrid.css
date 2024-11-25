@@ -37,6 +37,8 @@
   gap: 1px;
   background-color: #555;
   border: 1px solid #333;
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 .cell {
@@ -61,4 +63,12 @@
 
 .cell.empty:focus {
   outline: 2px solid #007bff;
+}
+
+@media (max-width: 768px) {
+  .cell {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
 }

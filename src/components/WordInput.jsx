@@ -4,10 +4,15 @@ function WordInput({ onWordsChange }) {
   const [input, setInput] = useState('');
 
   const handleChange = (e) => {
-    setInput(e.target.value);
-    const words = e.target.value.split('\n').filter(word => word.trim() !== '');
+    const value = e.target.value;
+    // 只允许英文字母和换行
+    if(!/^[a-zA-Z\n]*$/.test(value)) {
+        return;
+    }
+    setInput(value);
+    const words = value.split('\n').filter(word => word.trim() !== '');
     onWordsChange(words);
-  };
+};
 
   return (
     <textarea
