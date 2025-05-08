@@ -65,7 +65,7 @@ function CrosswordGrid({ grid }) {
           )}
         </div>
       </div>
-      <button onClick={saveAsImage}>保存为图片</button>
+      <button onClick={saveAsImage} className="green-button">保存为图片</button>
     </div>
   );
 }
