@@ -41,8 +41,12 @@ function App() {
         <DifficultySelect value={difficulty} onChange={setDifficulty} />
         <button onClick={handleGenerateCrossword}>生成填字游戏</button>
         <CrosswordGrid grid={crosswordGrid} />
-        <button onClick={handleGenerateCrossword}>再次生成</button>
-        <WordList usedWords={usedWords} allWords={words} />
+        {crosswordGrid.length > 0 && (
+          <button onClick={handleGenerateCrossword}>再次生成</button>
+        )}
+        {crosswordGrid.length > 0 && (
+          <WordList usedWords={usedWords} allWords={words} />
+        )}
       </div>
     </div>
   );
